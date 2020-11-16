@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_circle_radius_bottom_divider"
+    android:padding="@dimen/default_padding">
+
+    <TextView
+        android:id="@+id/tvActualSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="车辆标识：001-01" />
+
+    <TextView
+        android:id="@+id/tvPlateNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tvActualSign"
+        app:layout_constraintTop_toTopOf="@id/tvActualSign"
+        tools:text="车牌号码：豫A97GT7" />
+
+    <TextView
+        android:id="@+id/tvCarStateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="车辆在线:"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tvPlateNumber"
+        app:layout_constraintTop_toTopOf="@id/tvPlateNumber" />
+
+    <TextView
+        android:id="@+id/tvCarState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tvCarStateTitle"
+        app:layout_constraintTop_toTopOf="@id/tvCarStateTitle"
+        tools:text="是" />
+
+    <TextView
+        android:id="@+id/tvCallForHelpTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/shape_color_3cbca3_circle_dot"
+        android:drawablePadding="@dimen/dp_10"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvActualSign"
+        app:layout_constraintTop_toBottomOf="@+id/tvActualSign"
+        tools:text="呼救时间：2020年08月31日 12：30：50" />
+
+    <TextView
+        android:id="@+id/tvCarDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvCarStateTitle"
+        app:layout_constraintTop_toTopOf="@id/tvCallForHelpTime"
+        tools:text="车辆司机：李二蛋" />
+
+    <TextView
+        android:id="@+id/tvFirstAidAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/shape_color_fc9153_circle_dot"
+        android:drawablePadding="@dimen/dp_10"
+        android:textColor="@color/book_color_282828"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvCallForHelpTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvCallForHelpTime"
+        tools:text="急救地址:成都市青羊区三通桥路西月城街成都工学院2号教学楼三楼" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFirstAidAddress">
+
+        <TextView
+            android:id="@+id/tvHistoricalTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_color_gray_border_corner_radius"
+            android:paddingStart="18dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="8dp"
+            android:text="历史轨迹" />
+
+        <TextView
+            android:id="@+id/tvTrackPlayback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_color_gray_border_corner_radius"
+            android:paddingStart="18dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="8dp"
+            android:text="轨迹回放" />
+
+        <TextView
+            android:id="@+id/tvRealTimeVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_color_theme_corner_radius"
+            android:gravity="center"
+            android:paddingStart="18dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="8dp"
+            android:text="实时视频"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
